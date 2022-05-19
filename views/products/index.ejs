@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <title>Product | All item</title>
+</head>
+
+<body>
+    <a href="/products/create">Buat Produk Baru</a>
+    <br />
+    <br />
+
+    <% products.forEach(i=> { %>
+        <div>
+            <p>
+                <%= i.name %>
+            </p>
+            <p>
+                <%= i.price %>
+            </p>
+            <p>
+                <%= i.category %>
+            </p>
+            <p>
+                <%= i.detail %>
+            </p>
+            <p>
+                <%= i.shop %>
+            </p>
+            <a href="/products/<%= i.id %>">Baca lebih lanjut</a>
+        </div>
+        <% }) %>
+</body>
+
+</html>
